@@ -1,6 +1,4 @@
-from django.db.models.expressions import F
 from django.utils import timezone
-from .models import Survey
 from django.db import models
 
 

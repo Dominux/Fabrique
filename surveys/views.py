@@ -10,7 +10,7 @@ class SurveyViewSet(viewsets.ModelViewSet):
     serializer_class = SurveySerializer
 
 
-class AnswerViewSet(SurveySerializer):
+class AnswerViewSet(viewsets.ModelViewSet):
     def create(self, request, *args, **kwargs):
         for answer in request.body.get('answer'):
             serializer = AnswerSerializer(data=answer)
